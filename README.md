@@ -1,0 +1,1 @@
+A website that randomly shows one chapter from Diamond Sutra, both in Simplied Chinese and English, visualized in a pleasing way.

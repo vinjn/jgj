@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>金刚般若波罗蜜经 · The Diamond Sutra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="app">
+    <header class="header">
+      <div class="ornament">☸</div>
+      <h1 class="sutra-title">
+        <span class="title-zh">金刚般若波罗蜜经</span>
+        <span class="title-en">The Diamond Sutra</span>
+      </h1>
+      <p class="sutra-subtitle">
+        <span class="subtitle-zh">姚秦三藏法师鸠摩罗什译</span>
+        <span class="subtitle-en">Translated by Kumārajīva</span>
+      </p>
+    </header>
+
+    <main class="chapter" id="chapter">
+      <div class="chapter-header">
+        <span class="chapter-number" id="chapterNumber"></span>
+        <h2 class="chapter-title">
+          <span class="chapter-title-zh" id="chapterTitleZh"></span>
+          <span class="chapter-title-en" id="chapterTitleEn"></span>
+        </h2>
+      </div>
+
+      <div class="chapter-body">
+        <section class="text-block text-zh" id="textZh"></section>
+        <div class="divider"><span></span></div>
+        <section class="text-block text-en" id="textEn"></section>
+      </div>
+    </main>
+
+    <nav class="controls">
+      <button class="btn" id="btnRandom" title="Show another chapter">
+        <span class="btn-icon">⟳</span>
+        <span class="btn-label">Another Chapter</span>
+      </button>
+      <div class="chapter-nav">
+        <button class="btn btn-small" id="btnPrev" title="Previous chapter">◂</button>
+        <span class="chapter-indicator" id="chapterIndicator"></span>
+        <button class="btn btn-small" id="btnNext" title="Next chapter">▸</button>
+      </div>
+    </nav>
+
+    <footer class="footer">
+      <p>一切有为法 · 如梦幻泡影 · 如露亦如电 · 应作如是观</p>
+    </footer>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
