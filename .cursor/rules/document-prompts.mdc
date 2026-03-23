@@ -1,0 +1,48 @@
+---
+description: Document every user prompt in the prompt log
+alwaysApply: true
+---
+
+# Prompt Documentation
+
+After completing each user request, append an entry to `docs/prompt-log.md`.
+
+## Entry Format
+
+```markdown
+### YYYY-MM-DD HH:MM — <short title summarizing the request>
+
+**Prompt:** <the user's request, quoted verbatim or closely paraphrased>
+
+**What was done:**
+- <concise bullet points of actions taken and files changed>
+```
+
+## Rules
+
+- Always append to the end of the file; never overwrite existing entries.
+- Keep each entry concise (under 10 lines).
+- Use the actual current date and time.
+- If the request is purely a question with no code changes, still log it but note "No files changed" under **What was done**.
+- Create the file if it doesn't exist yet.
+
+## Committing & Pushing
+
+When the user asks to commit or push changes, build the commit message from the
+uncommitted entries in `docs/prompt-log.md`:
+
+1. Use the **most recent entry's short title** as the commit subject line.
+2. If multiple entries are uncommitted, list the other titles as bullet points in the body.
+3. **Do not include "What was done" details** in the commit message — titles only.
+4. Always include `docs/prompt-log.md` in the same commit.
+5. After committing, run `git push`.
+
+### Example commit message shape
+
+```
+Move title from top to bottom
+
+- Configure prompt documentation
+- Make the layout mobile friendly
+- Move title from top to bottom
+```
